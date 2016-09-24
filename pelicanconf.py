@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = u'admin'
 SITENAME = u'Business Solutions Hungary'
-SITEURL = 'https://bi-.github.io/bshungary'
+SITEURL = ''
 
 PATH = 'content'
 
