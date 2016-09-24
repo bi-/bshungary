@@ -115,7 +115,7 @@
 				<li> {{ SITEURL }}/ {{ siteurl }} 
 				<li> {{ main_siteurl }}/ {{ siteurl }} 
 -->
-				<a href="{{ SITEURL }}/{{siteurl}}">{{ lang }}</a></li>
+				<a href="{{ SITEURL }}/{{ relpath_to_site(DEFAULT_LANG, lang }}">{{lang}}</a></li>
 		{% endfor %}
 		    <!-- separator -->
 		    <li style="background-color: white; padding: 5px;">&nbsp</li>
