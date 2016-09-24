@@ -43,7 +43,7 @@ DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
-STATIC_PATHS = ['images']	
+#STATIC_PATHS = ['images']	
 THEME = "./pelican-themes/bootstrap2"
 PLUGIN_PATHS = ['./pelican-plugins']
 PLUGINS = [ 'i18n_subsites']
