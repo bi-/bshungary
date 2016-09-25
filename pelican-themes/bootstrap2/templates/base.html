@@ -56,6 +56,11 @@
   <body>
 
     <div class="navbar navbar-fixed-top">
+  <div class="navbar-header">
+      <a class="navbar-brand" href="{{ SITEURL }}/index.html">
+        <img alt="{{ SITENAME }}" height="22" src="{{ main_siteurl }}/images/logo.png">
+      </a>
+    </div>
       <div class="navbar-inner">
         <div class="container-fluid">
           <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -63,7 +68,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="{{ SITEURL }}/index.html">{{ SITENAME }} {% if SITESUBTITLE %} <strong>{{ SITESUBTITLE }}</strong>{% endif %}</a>
+          <!--<a class="brand" href="{{ SITEURL }}/index.html">{{ SITENAME }} {% if SITESUBTITLE %} <strong>{{ SITESUBTITLE }}</strong>{% endif %}</a>-->
           <div class="nav-collapse">
             <ul class="nav">
               {% for title, link in MENUITEMS %}
@@ -106,19 +111,26 @@
 		<li> lang_siteurls: {{ lang_siteurls }}
 		<li> extra_siteurls: {{ extra_siteurls }}
 		<li> relpath_to_site: {{ relpath_to_site }}
+               {{page}}
 -->
 		{% if lang_siteurls %}
+<div class="btn-group" role="group" aria-label="...">
+
 		{% for lang, siteurl in lang_siteurls.items() %}
-                    <li {% if lang == DEFAULT_LANG %} class="active"{% endif %}>
+                    <!--<li {% if lang == DEFAULT_LANG %} class="active"{% endif %}>-->
 <!--
 				<li> {{ siteurl }}
 				<li> {{ SITEURL }}/ {{ siteurl }} 
 				<li> {{ main_siteurl }}/ {{ siteurl }} 
 -->
-				<a href="{{ SITEURL }}/{{ relpath_to_site(DEFAULT_LANG, lang)}}">{{lang}}</a></li>
+<!--				<a href="{{ SITEURL }}/{{ relpath_to_site(DEFAULT_LANG, lang)}}/pages/">{{lang}}</a></li>-->
+<button type="button" class="btn btn-default {% if lang == DEFAULT_LANG %} active {%endif%}"><a href="#">{{lang}}</a></button>
 		{% endfor %}
+</div>
 		    <!-- separator -->
+<!--
 		    <li style="background-color: white; padding: 5px;">&nbsp</li>
+-->
 		{% endif %}
         <div class="span9" id="content">
             {% block content %}
