@@ -124,7 +124,7 @@
 				<li> {{ main_siteurl }}/ {{ siteurl }} 
 -->
 <!--				<a href="{{ SITEURL }}/{{ relpath_to_site(DEFAULT_LANG, lang)}}/pages/">{{lang}}</a></li>-->
-<button type="button" class="btn btn-default {% if lang == DEFAULT_LANG %} active {%endif%}"><a href="#">{{lang}}</a></button>
+<button type="button" class="btn btn-default {% if lang == DEFAULT_LANG %} active {%endif%}"><a href="{{ SITEURL }}/{{ relpath_to_site(DEFAULT_LANG, lang)}}/pages/">{{lang}}</a></button>
 		{% endfor %}
 </div>
 		    <!-- separator -->
